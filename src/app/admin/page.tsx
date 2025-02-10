@@ -1,89 +1,84 @@
-// import { useRouter } from "next/router";
+
+// "use client";
+
+// import { useRouter } from "next/navigation";
 // import { useState } from "react";
 
-// export default function AdminLogin (){
-//     const [email, setEmail] = useState()
-//     const [password, setPassword] = useState()
-//     const router = useRouter()
+// export default function AdminLogin() {
+//   const [email, setEmail] = useState("");
+//   const [password, setPassword] = useState("");
 
-//     const handleLogin = (e :React.FormEvent) =>{
-//         e.preventDefault()
-//     }
-//     if (email === ""){
-//         localStorage.setItem("isLoggedIn","true")
-//         router.push("/admin/dashboard")
-//     }else{
-//         alert("Invalid email or password")
-//     }
-//     return(
-//         <div className="flex justify-center items-center h-screen bg-gray-200">
-//             <form onSubmit={handleLogin}
-//              action=""
-//              className="bg-white p-6 rounded shadow-md">
-//                 <h2 className="text-xl font-bold mb-4">
-//                     Admin Login
-//                 </h2>
-//                 <input type="email"
-//                 placeholder="Email"
-//                 onChange={(e) => setEmail(e.target.value)} 
-//                 className="w-full p-3 mb-4 border border-gray-300 rounded"
-//                 />
-//                 <input type="password"
-//                 placeholder="Pas"
-//                 onChange={(e) => setPassword(e.target.value)} 
-//                 className="w-full p-3 mb-4 border border-gray-300 rounded"
-//                 />
-//                 <button 
-//                 type="submit"
-//                 className="bg-red-400 text-white px-4 py-2 rounded w-full">
-//                     Login
-//                 </button>
-//              </form>
+//   const router = useRouter();
 
-//         </div>
-//     )
+//   const handleLogin = (e: React.FormEvent) => {
+//     e.preventDefault();
+
+
+//     if (email === "kaladi@gmail.com" && password === "kaladi") {
+//       localStorage.setItem("isLoggedIn", "true");
+//       router.push("/admin/dashboard");
+//     } else {
+//       alert("Invalid email or password");
+//     }
+    
+//   };
+
+
+//   return (
+//     <div className="flex justify-center items-center h-screen bg-gray-100">
+//       <form onSubmit={handleLogin} className="bg-white p-6 rounded shadow-md">
+//         <h2 className="text-xl font-bold mb-4">Admin Login</h2>
+//         <input
+//           type="email"
+//           placeholder="Email"
+//           onChange={(e) => setEmail(e.target.value)}
+//           className="w-full p-3 mb-4 border border-gray-300 rounded"
+//           value={email}
+//         />
+//         <input
+//           type="password"
+//           placeholder="Password"
+//           onChange={(e) => setPassword(e.target.value)}
+//           className="w-full p-3 mb-4 border border-gray-300 rounded"
+//           value={password}
+//         />
+//         <button
+//           type="submit"
+//           className="bg-red-500 text-white px-4 py-2 rounded w-full"
+//         >
+//           Login
+//         </button>
+//       </form>
+//     </div>
+//   );
 // }
-
-
 "use client";
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function AdminLogin() {
-  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   const router = useRouter();
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
 
-
-    if (email === "kaladi@gmail.com" && password === "kaladi") {
+    if (password === "Ilovepakistan1") {
       localStorage.setItem("isLoggedIn", "true");
       router.push("/admin/dashboard");
     } else {
-      alert("Invalid email or password");
+      alert("Invalid password");
     }
-    
   };
-
 
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
       <form onSubmit={handleLogin} className="bg-white p-6 rounded shadow-md">
         <h2 className="text-xl font-bold mb-4">Admin Login</h2>
         <input
-          type="email"
-          placeholder="Email"
-          onChange={(e) => setEmail(e.target.value)}
-          className="w-full p-3 mb-4 border border-gray-300 rounded"
-          value={email}
-        />
-        <input
           type="password"
-          placeholder="Password"
+          placeholder="Enter Password"
           onChange={(e) => setPassword(e.target.value)}
           className="w-full p-3 mb-4 border border-gray-300 rounded"
           value={password}
